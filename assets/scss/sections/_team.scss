@@ -1,0 +1,815 @@
+/* ----- 23. Team ----- */
+.rv-3-team {
+    padding: 60px 0 0;
+
+    @include xl {
+        padding: 40px 0 0;
+    }
+
+    @include md {
+        padding: 30px 0 0;
+    }
+}
+
+.rv-3-member {
+    overflow: hidden;
+
+    &:hover {
+        .rv-3-member {
+            &__img img {
+                scale: 1.07;
+            }
+
+            &__txt {
+                background-color: #A97240;
+                border-color: #A97240;
+            }
+
+            &__socials {
+                transform: rotate(0) perspective(999px);
+            }
+
+            &__name {
+                color: var(--white-f);
+            }
+
+            &__label {
+                color: rgb(255, 255, 255, 0.70);
+            }
+        }
+    }
+
+    &__img {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            transition: 0.4s ease;
+        }
+    }
+
+    &__txt {
+        border: 1px solid rgb(5 5 5 / 14%);
+        border-top: none;
+        padding: 22px 34px 25px;
+        position: relative;
+        transition: 0.4s ease;
+
+        @include lg {
+            padding: 17px 24px 20px;
+        }
+
+        @include md {
+            padding: 12px 18px 15px;
+        }
+    }
+
+    &__socials {
+        position: absolute;
+        bottom: 100%;
+        right: -2px;
+        background-color: #A97240;
+        padding: 10px 24px;
+        display: flex;
+        gap: 15px;
+        transform: perspective(300px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+        transform-origin: bottom;
+        transition: 0.4s ease;
+
+        @include md {
+            padding: 8px 15px;
+        }
+
+        a {
+            color: rgb(255, 255, 255, 0.30);
+            font-size: 14px;
+
+            &:hover {
+                color: var(--white-f);
+            }
+        }
+    }
+
+    &__name {
+        transition: 0.4s ease;
+        margin-bottom: 0;
+        color: #050505;
+        font-size: 18px;
+        font-weight: 600;
+
+        @include md {
+            font-size: 16px;
+        }
+    }
+
+    &__label {
+        transition: 0.4s ease;
+        color: rgb(5, 5, 5, 0.7);
+        font-family: var(--mulish);
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+}
+
+// IMDEX-5 TEAM SECTION
+.rv-5-member {
+    text-align: center;
+
+    &__img {
+        width: max-content;
+        max-width: 100%;
+        margin: auto;
+        position: relative;
+        width: 387px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+
+        @include lg {
+            height: 330px;
+            margin-bottom: 15px;
+        }
+
+        @include md {
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -15px;
+            width: calc(100% + 5px);
+            height: calc(100% + 5px);
+            background: url(../img/rv-5-member-img-frame.png) no-repeat center center;
+            background-size: 100% 100%;
+
+            @include xl {
+                width: calc(100% + 15px);
+                height: calc(100% - 3px);
+            }
+
+            @include md {
+                width: calc(100% - 10px);
+                height: calc(100% + 0px);
+                left: 0;
+            }
+        }
+
+        img {
+            width: 342px;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    &__label {
+        color: #8E5B63;
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 6px;
+    }
+
+    &__name {
+        color: #050505;
+        font-family: var(--philosopher);
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 0;
+
+        @include sm {
+            font-size: 22px;
+        }
+
+        a:hover {
+            color: #8e5b63;
+        }
+    }
+}
+
+#rv-5-team-slider-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 67px;
+    gap: 100px;
+
+    @include lg {
+        margin-top: 47px;
+    }
+
+    @include md {
+        gap: 70px;
+    }
+
+    @include xs {
+        margin-top: 37px;
+    }
+
+    button {
+        color: #050505;
+        font-family: var(--mulish);
+        font-size: 15px;
+        font-weight: 500;
+
+        &:hover {
+            color: #8e5b63;
+        }
+
+        &.swiper-button-disabled {
+            opacity: 60%;
+        }
+    }
+}
+
+// INDEX-6 TEAM
+.rv-6-team {
+    padding: 60px 0 120px;
+
+    @include xl {
+        padding: 60px 0 80px;
+    }
+
+    @include md {
+        padding: 40px 0 60px;
+    }
+
+    .rv-6-section__heading {
+        text-align: center;
+    }
+}
+
+.rv-6-member {
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+
+        .rv-6-member__txt>* {
+            translate: 0 0;
+            opacity: 1;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background-color: rgb(5 5 5 / 30%);
+        backdrop-filter: blur(6px);
+        opacity: 0;
+        transition: 0.4s ease;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    &__txt {
+        padding: 40px 30px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        @include lg {
+            padding: 20px;
+        }
+
+        >* {
+            translate: 0 50%;
+            opacity: 0;
+            transition: 0.4s ease;
+
+            &:nth-child(2) {
+                transition-delay: 0.15s;
+            }
+
+            &:nth-child(3) {
+                transition-delay: 0.25s;
+            }
+        }
+    }
+
+    &__role {
+        color: rgba(255, 255, 255, 0.70);
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+    }
+
+    &__name {
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 16px;
+
+        @include lg {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__socials {
+        a {
+            background-color: var(--orange);
+            border-color: var(--orange);
+            color: var(--white-f);
+
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 13px;
+        }
+    }
+
+}
+
+#rv-6-team-slider-pagination .swiper-pagination-bullet {
+    &::before {
+        background-color: rgb(5 5 5 / 20%);
+    }
+
+    &-active {
+        border-color: var(--black);
+
+        &::before {
+            background-color: var(--black);
+        }
+    }
+}
+
+// INDEX-8 TEAM
+.rv-8-team {
+    .rv-3-section-heading {
+        margin-bottom: 48px;
+
+        @include lg {
+            margin-bottom: 33px;
+        }
+
+        @include md {
+            margin-bottom: 28px;
+        }
+
+        @include sm {
+            row-gap: 15px;
+        }
+
+        @include xxs {
+            row-gap: 10px;
+        }
+    }
+}
+
+.rv-8-member {
+    height: auto;
+
+    &:hover {
+        .rv-8-member__img img {
+            scale: 1.1;
+        }
+    }
+
+    &__img {
+        margin-bottom: 12px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .rv-1-speaker__socials {
+        top: 24px;
+        right: 24px;
+
+        a {
+            background-color: #1C74E9;
+            border-radius: 0;
+            color: var(--white-f);
+            border: 1px solid #1C74E9;
+
+            &:hover {
+                background-color: transparent;
+                color: var(--black);
+            }
+        }
+    }
+
+    .rv-3-project__sub-title {
+        margin-bottom: 6px;
+
+        @include lg {
+            margin-bottom: 3px;
+        }
+    }
+
+    .rv-3-project__title {
+        font-family: var(--mulish);
+        font-size: 20px;
+        font-weight: 700;
+
+        @include lg {
+            font-size: 18px;
+        }
+    }
+}
+
+// INDEX-9 TEAM
+.rv-9-team {
+    background: linear-gradient(180deg, rgba(101, 171, 3, 0.10) 0%, rgba(101, 171, 3, 0.02) 100%);
+
+    &__slider {
+        padding-bottom: 20px;
+        margin-bottom: -20px;
+    }
+
+    .rv-2-swiper-dots.rv-9-slider-dots {
+        margin-top: 60px;
+        justify-content: center;
+
+        @include xl {
+            margin-top: 40px;
+        }
+
+        @include sm {
+            margin-top: 30px;
+        }
+
+        .swiper-pagination-bullet {
+            &::before {
+                background-color: rgb(0 0 0 / 24%);
+            }
+
+            &-active {
+                border-color: var(--black);
+
+                &::before {
+                    background-color: var(--black);
+                }
+            }
+        }
+    }
+}
+
+.rv-9-member {
+    &:hover {
+        .rv-9-member__img img {
+            scale: 1.08;
+        }
+
+        .rv-1-speaker__socials {
+            translate: 0;
+
+            a {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__img {
+        overflow: hidden;
+        border-radius: 14px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__txt {
+        background: var(--white-f);
+        border-radius: 10px;
+        position: relative;
+        margin: -40px 30px 0;
+        padding: 22px 30px 20px;
+        box-shadow: 0px 1px 3px 0px rgba(5, 5, 5, 0.14);
+
+        @include lg {
+            margin: -40px 15px 0;
+            padding: 15px 20px;
+        }
+
+        @include sm {
+            padding: 12px 17px;
+        }
+
+        @include xs {
+            margin: -40px 8px 0;
+            padding: 10px 15px;
+        }
+
+        .rv-3-project__sub-title {
+            text-transform: capitalize;
+            font-weight: 500;
+            padding-left: 0;
+            margin-bottom: 4px;
+
+            &::before {
+                content: none;
+            }
+
+            a:hover {
+                color: #65AB03;
+            }
+        }
+
+        .rv-3-project__title {
+            font-weight: 700;
+            font-size: 20px;
+
+            @include sm {
+                font-size: 18px;
+            }
+
+            @include xs {
+                font-size: 16px;
+            }
+
+            a:hover {
+                color: #65AB03;
+            }
+        }
+    }
+
+
+    &-socials {
+        position: absolute;
+        bottom: calc(100% - 20px);
+        right: 30px;
+        display: flex;
+        gap: 6px;
+        flex-direction: column;
+        overflow: hidden;
+
+        @include sm {
+            right: 20px;
+        }
+
+        &__icon {
+            font-size: 18px;
+            border-radius: 6px;
+            background: #65AB03;
+            box-shadow: 0px 6px 20px 0px rgba(8, 28, 21, 0.30);
+            color: var(--white-f);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            @include xs {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+
+    .rv-1-speaker__socials {
+        translate: 0 100%;
+        transition: 0.4s ease;
+        position: static;
+
+        a {
+            transform: translateX(0);
+            transform-origin: bottom;
+            border-radius: 6px;
+
+            @include xs {
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+            }
+
+            &:hover {
+                background-color: #65AB03;
+            }
+        }
+    }
+}
+
+// INDEX-10 TEAM
+.rv-10-team {
+    &__heading {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 48px;
+
+        .rv-10-section__title {
+            margin-bottom: 0;
+        }
+
+        .right {
+            margin-bottom: 10px;
+
+            a {
+                color: var(--black);
+                font-family: var(--mulish);
+                font-size: 16px;
+                font-weight: 700;
+                text-underline-offset: 3px;
+            }
+        }
+    }
+
+    &__row {
+        --bs-gutter-x: 60px;
+    }
+}
+
+.rv-10-member {
+    &:hover {
+        .rv-6-member__txt {
+            translate: 0 0;
+        }
+
+        img {
+            scale: 1.06;
+        }
+    }
+
+    &::before {
+        content: none;
+    }
+
+    >img {
+        aspect-ratio: 39 / 47;
+    }
+
+    .rv-6-member__txt {
+        background-color: #EFC329;
+        padding: 27px 40px;
+        translate: 0 100%;
+        transition: 0.4s cubic-bezier(0.16, 0.71, 0.17, 1);
+        font-family: var(--mulish);
+    }
+
+    .rv-6-member__role {
+        color: rgb(5 5 5 / 70%);
+        font-weight: 600;
+    }
+
+    .rv-6-member__name {
+        color: #050505;
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        a {
+            color: var(--black);
+            font-size: 15px;
+            opacity: 30%;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// INDEX-11 TEAM
+.rv-11-team {
+    background-color: #F7F4F0;
+
+    .rv-11-section__heading {
+        text-align: center;
+    }
+
+    &__slider {
+        padding-bottom: 5px;
+        margin-bottom: -5px;
+    }
+}
+
+.rv-11-member {
+    overflow: hidden;
+    padding-bottom: 5px;
+    margin-bottom: -5px;
+
+    &:hover {
+        .rv-9-member__img {
+            border-radius: 40px 0;
+
+            img {
+                scale: 1.06;
+            }
+        }
+
+        .rv-1-speaker__socials {
+            a {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+
+    .rv-1-speaker__socials {
+        a {
+            background-color: #A98153;
+            border-radius: 10px 0;
+            color: var(--white-f);
+        }
+    }
+
+    .rv-9-member__img {
+        transition: 0.4s ease;
+        border-radius: 0;
+
+        img {
+            width: 100%;
+            max-height: 500px;
+        }
+    }
+
+    .rv-9-member__txt {
+        border-radius: 20px 0;
+        text-align: center;
+        font-family: var(--mulish);
+    }
+
+    .rv-3-project__sub-title {
+        color: #A98153;
+    }
+}
+
+// INDEX-14 TEAM
+.rv-14-team {
+    .rv-14-section__heading {
+        text-align: center;
+        width: 45%;
+        margin-inline: auto;
+    }
+}
+
+.rv-14-member {
+    &:hover {
+        .rv-14-member__img img {
+            scale: 1.06;
+        }
+
+        .rv-14-member__socials a {
+            background-color: #E64209;
+        }
+    }
+
+    &__img {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 420px;
+        }
+    }
+
+    &__txt {
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        font-family: var(--mulish);
+
+        .rv-6-member__role {
+            font-size: 15px;
+            color: rgb(2 2 8 / 70%);
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+
+        .rv-6-member__name {
+            color: #020208;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+
+            a:hover {
+                color: #E64209;
+            }
+        }
+    }
+
+    &__socials {
+        a {
+            background-color: #174E5E;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            color: rgb(255 255 255 / 70%);
+            font-size: 10px;
+        }
+    }
+}

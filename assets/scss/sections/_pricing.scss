@@ -1,0 +1,379 @@
+/* ----- 10. Pricing ----- */
+.rv-1-pricing {
+    .rv-1-section-heading {
+        text-align: center;
+    }
+
+    .rv-1-section__title {
+        margin-bottom: 48px;
+
+        @include lg {
+            margin-bottom: 33px;
+        }
+
+        @include sm {
+            margin-bottom: 23px;
+        }
+    }
+
+    &__row {
+        --bs-gutter-x: 30px;
+        --bs-gutter-y: 30px;
+
+        @include lg {
+            --bs-gutter-x: 20px;
+            --bs-gutter-y: 20px;
+        }
+
+        @include xs {
+            --bs-gutter-x: 15px;
+            --bs-gutter-y: 15px;
+        }
+    }
+
+    &-pack {
+        background: url(../img/rv-1-pricing-bg.png) no-repeat center center;
+        background-size: 100% 100%;
+        padding: 60px 24px;
+
+        @include lg {
+            padding: 45px 24px;
+        }
+
+        @include sm {
+            padding: 35px 15px;
+        }
+
+        &__heading {
+            padding-left: 15px;
+        }
+
+        &__sub-title {
+            font-family: var(--mulish);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 11px;
+
+            @include sm {
+                margin-bottom: 6px;
+            }
+
+            @include xs {
+                font-size: 16px;
+            }
+        }
+
+        &__title {
+            font-family: var(--mulish);
+            font-weight: 700;
+            font-size: 60px;
+            color: var(--black);
+            margin-bottom: 26px;
+
+            @include xl {
+                font-size: 45px;
+            }
+
+            @include lg {
+                margin-bottom: 16px;
+                font-size: 40px;
+            }
+
+            @include sm {
+                font-size: 35px;
+                margin-bottom: 10px;
+            }
+
+            @include xs {
+                font-size: 30px;
+            }
+        }
+
+        &__details {
+            background-color: var(--white-f);
+            padding: 40px 40px 45px;
+            border: 1px solid rgb(5 5 5 / 08%);
+
+            @include lg {
+                padding: 30px 25px;
+            }
+
+            @include sm {
+                padding: 20px 15px;
+            }
+        }
+
+        &__info {
+            font-family: var(--mulish);
+            font-size: 15px;
+            font-weight: 500;
+            color: rgb(5 5 5 / 70%);
+            padding-left: 32px;
+            position: relative;
+
+            @include sm {
+                padding-left: 27px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+
+                @include lg {
+                    margin-bottom: 15px;
+                }
+
+                @include sm {
+                    margin-bottom: 12px;
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                translate: 0 -50%;
+                background: url(../img/rv-1-icon-3.png) no-repeat center center;
+                background-size: 100%;
+                width: 20px;
+                height: 20px;
+                box-shadow: 0 1px 2px rgb(6, 138, 75, 0.3);
+                border-radius: 50%;
+
+                @include sm {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+
+        &__btn {
+            display: flex;
+            margin-top: 40px;
+            line-height: 48px;
+
+            @include lg {
+                margin-top: 25px;
+            }
+
+            @include sm {
+                margin-top: 15px;
+                line-height: 42px;
+            }
+
+            &:hover {
+                .txt {
+                    background-color: var(--orange);
+                    border-color: var(--orange);
+                    color: var(--white-f);
+                }
+
+                .icon {
+                    background-color: var(--orange);
+                    border-color: var(--orange);
+
+                    img {
+                        filter: invert(0);
+                    }
+                }
+            }
+
+            .txt {
+                width: 100%;
+                text-align: center;
+                border-radius: 14px;
+                color: var(--black);
+                background-color: var(--white-f);
+                border: 1px solid rgb(5 5 5 / 14%);
+            }
+
+            .icon {
+                background-color: var(--white-f);
+                border: 1px solid rgb(5 5 5 / 14%);
+                border-radius: 14px;
+                transition: 0.4s ease;
+
+                @include xs {
+                    display: none;
+                }
+
+                img {
+                    transition: 0.4s ease;
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+}
+
+// INDEX-8 PRICING
+.rv-8-pricing {
+    @include xl {
+        padding: 40px 0 80px;
+    }
+
+    @include md {
+        padding: 30px 0 60px;
+    }
+}
+
+.rv-8-pricing-pack {
+    background: rgba(28, 116, 233, 0.06);
+    padding: 50px 40px;
+
+    @include lg {
+        padding: 40px 30px;
+    }
+
+    @include sm {
+        padding: 35px 30px;
+    }
+
+    .rv-1-pricing-pack {
+        &__title {
+            margin-bottom: 0;
+        }
+
+        &__heading {
+            padding-left: 0;
+            border-bottom: 1px solid rgb(5 5 5 / 8%);
+            padding-bottom: 25px;
+            margin-bottom: 40px;
+
+            @include lg {
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+            }
+
+            @include sm {
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+            }
+        }
+
+
+        &__info::before {
+            background-image: url(../img/rv-8-pricing-icon.png);
+            border-radius: 0;
+        }
+    }
+
+    .rv-3-def-btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 54px;
+        background-color: transparent;
+        border: 1px solid rgb(5 5 5 / 08%);
+        color: var(--black);
+
+        @include lg {
+            margin-bottom: 44px;
+        }
+
+        @include sm {
+            margin-bottom: 34px;
+        }
+
+        &:hover {
+            background-color: #1C74E9;
+            border-color: #1C74E9;
+            color: var(--white-f);
+        }
+    }
+}
+
+// INDEX-11 PRICING
+.rv-11-pricing {
+    .rv-11-section__heading {
+        text-align: center;
+    }
+}
+
+.rv-11-pricing-plan {
+    &__title {
+        color: var(--black);
+        font-family: var(--mulish);
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 127.273%;
+        margin-bottom: 30px;
+    }
+
+    &__txt {
+        border-radius: 40px 0px;
+        border: 1px solid rgba(5, 5, 5, 0.10);
+        background: var(--white-f);
+        position: relative;
+        margin: 0 30px;
+        margin-top: -80px;
+        padding: 60px 40px;
+        font-family: var(--mulish);
+
+        >a {
+            color: #A98153;
+            font-size: 15px;
+            font-weight: 700;
+            margin-top: 27px;
+        }
+    }
+
+    &-feature {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 4px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                translate: 0 -50%;
+                background: linear-gradient(to right, transparent 50%, rgba(5, 5, 5, 0.24) 50%);
+                background-repeat: repeat-x;
+                background-size: 6% 100%;
+                right: 0;
+                height: 1px;
+                z-index: -1;
+            }
+        }
+
+        h6 {
+            margin-bottom: 0;
+            background-color: var(--white-f);
+            color: var(--black);
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        &__title {
+            padding-right: 5px;
+        }
+
+        &__price {
+            padding-left: 5px;
+        }
+    }
+
+    &__sub-title {
+        color: rgb(5 5 5 / 70%);
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    &.popular {
+        .rv-11-pricing-plan__img {
+            border-radius: 40px 0;
+            overflow: hidden;
+        }
+    }
+}

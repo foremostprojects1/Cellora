@@ -1,0 +1,1129 @@
+/* ----- 06. About ----- */
+.rv-1-about {
+    &-row {
+        --bs-gutter-x: 40px;
+        --bs-gutter-y: 40px;
+
+        @include xxs {
+            --bs-gutter-y: 30px;
+        }
+    }
+
+    &__img {
+        img {
+            width: 100%;
+
+            @include md {
+                height: 350px;
+            }
+        }
+    }
+
+    &__pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 40px;
+
+        @include xl {
+            margin-bottom: 30px;
+        }
+
+        @include lg {
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        @include xxs {
+            gap: 10px;
+        }
+    }
+
+    &__pill {
+        border: 1px solid rgb(5 5 5 / 14%);
+        border-radius: 30px;
+        padding: 6px 14px;
+        line-height: 1;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    &__txt {
+        padding-bottom: 215px;
+        position: relative;
+
+        @include xl {
+            padding-bottom: 145px;
+        }
+
+        @include xxs {
+            padding-bottom: 0;
+        }
+    }
+
+    &__descr {
+        margin-bottom: 53px;
+
+        @include xl {
+            margin-bottom: 43px;
+        }
+
+        @include sm {
+            margin-bottom: 28px;
+        }
+    }
+
+    &__right-img {
+        img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 222px;
+            height: 222px;
+
+            @include xs {
+                width: 192px;
+                height: 192px;
+            }
+
+            @include xxs {
+                padding-top: 30px;
+                position: static;
+                width: 100%;
+                height: 220px;
+            }
+        }
+    }
+
+    &__vector {
+        position: absolute;
+        z-index: -1;
+
+        &-1 {
+            top: 514px;
+            left: -145px;
+            animation: spin 4.5s linear infinite;
+        }
+
+        &-2 {
+            top: 450px;
+            left: 980px;
+            animation: moveX 2.5s linear alternate infinite;
+        }
+
+        &-3 {
+            top: 115px;
+            right: -160px;
+            animation: spin 4.5s linear infinite;
+        }
+    }
+}
+
+// INDEX-2 ABOUT
+.rv-2-about {
+    overflow: hidden;
+
+    &__img {
+        @include sm {
+            text-align: center;
+        }
+
+        img {
+            background: url(../img/rv-2-about-img-bg.png) no-repeat center center;
+            background-size: contain;
+
+            @include sm {
+                width: 356px;
+            }
+
+            @include xs {
+                width: 265px;
+            }
+        }
+    }
+
+    &__txt {
+        padding-left: 105px;
+
+        @include xxl {
+            padding-left: 75px;
+        }
+
+        @include xl {
+            padding-left: 55px;
+        }
+
+        @include md {
+            padding-left: 35px;
+        }
+
+        @include sm {
+            padding-left: 0;
+        }
+    }
+
+    &-item {
+        display: flex;
+        gap: 25px;
+        max-width: 500px;
+
+        @include md {
+            gap: 15px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+
+            @include xl {
+                margin-bottom: 20px;
+            }
+
+            @include md {
+                margin-bottom: 10px;
+            }
+        }
+
+        &__img {
+            flex-shrink: 0;
+
+            img {
+                width: 50px;
+                height: 50px;
+                object-fit: contain;
+
+                @include md {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 20px;
+            font-weight: 600;
+
+            @include md {
+                font-size: 18px;
+            }
+        }
+
+        &__descr {
+            color: rgb(255 255 255 / 70%);
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 160%;
+        }
+    }
+}
+
+// INDEX-3 ABOUT
+.rv-3-about {
+    @include md {
+        padding: 60px 0;
+    }
+
+    &__row {
+        --bs-gutter-x: 100px;
+
+        @include xxl {
+            --bs-gutter-x: 60px;
+        }
+
+        @include lg {
+            --bs-gutter-x: 45px;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            max-width: none;
+
+            @include lg {
+                max-height: 670px;
+            }
+
+            @include md {
+                max-width: 100%;
+                width: 100%;
+                max-height: 450px;
+            }
+
+            @include sm {
+                max-height: 350px;
+            }
+        }
+    }
+
+    &__txt {
+        position: relative;
+
+        .rv-3-sub-title {
+            @include md {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__descr {
+        color: rgb(5, 5, 5, 0.7);
+        font-family: var(--mulish);
+        line-height: 162.5%;
+        margin-bottom: 32px;
+
+        @include xl {
+            margin-bottom: 22px;
+        }
+    }
+
+    &__features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid rgba(5, 5, 5, 0.10);
+        padding-top: 34px;
+        margin-bottom: 46px;
+        gap: 10px;
+
+        @include xl {
+            grid-template-columns: repeat(2, 1fr);
+            padding-top: 24px;
+            margin-bottom: 36px;
+        }
+
+        @include md {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include sm {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include xxs {
+            grid-template-columns: repeat(1, 1fr);
+            margin-bottom: 22px;
+        }
+
+        li {
+            color: #050505;
+            font-family: var(--mulish);
+            font-weight: 600;
+            line-height: 162.5%;
+            position: relative;
+            padding-left: 18px;
+
+            &::before {
+                position: absolute;
+                content: "\2b";
+                left: 0;
+                top: 0;
+                width: 10px;
+                height: 10px;
+                font-size: 12px;
+                font-family: "Font Awesome 6 Sharp";
+            }
+        }
+    }
+
+    &__vector {
+        position: absolute;
+        animation: scaleInOut 1.5s linear infinite alternate;
+        z-index: 1;
+        pointer-events: none;
+
+        &-1 {
+            right: 170px;
+            bottom: 100%;
+
+            @include xxs {
+                right: 40px;
+            }
+        }
+
+        &-2 {
+            left: calc(100% + 80px);
+            top: 25px;
+        }
+
+        &-3 {
+            bottom: -85px;
+            right: 120px;
+
+            @include xxs {
+                right: 40px;
+            }
+        }
+    }
+}
+
+@keyframes scaleInOut {
+    0% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 1.08;
+    }
+}
+
+// INDEX-5 ABOUT 
+.rv-5-about {
+    position: relative;
+
+    &__row {
+        --bs-gutter-x: 117px;
+
+        @include xl {
+            --bs-gutter-x: 50px;
+        }
+
+        @include lg {
+            --bs-gutter-x: 40px;
+        }
+    }
+
+    &__img {
+        position: relative;
+        z-index: 2;
+        outline: 1px solid rgba(5, 5, 5, 0.14);
+        overflow: hidden;
+        outline-offset: 25px;
+        width: max-content;
+        max-width: 100%;
+        margin: auto;
+
+        @include xl {
+            outline-offset: 0;
+            padding: 25px;
+        }
+
+        @include lg {
+            padding: 15px;
+        }
+
+        @include md {
+            width: 100%;
+        }
+
+        >img {
+            width: 580px;
+            aspect-ratio: 1;
+            object-fit: cover;
+
+            @include md {
+                width: 100%;
+                aspect-ratio: 2 / 1.5;
+            }
+        }
+    }
+
+    &-stat {
+        background-color: var(--white-f);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 28px 45px;
+        font-size: 16px;
+        color: #808080;
+        font-weight: 500;
+        text-transform: uppercase;
+        z-index: 1;
+
+        @include lg {
+            padding: 18px 35px;
+            padding-right: 75px;
+        }
+
+        @include xxs {
+            padding: 8px 25px;
+            padding-right: 65px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 130%;
+            height: 100%;
+            background-color: #404B44;
+            transform: rotate(354deg);
+            top: 0px;
+            left: -8px;
+            z-index: -1;
+
+            @include xxs {
+                right: -15px;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: var(--white-f);
+            z-index: -1;
+        }
+
+        &-number {
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--black);
+            display: block;
+            line-height: 1;
+            margin-bottom: 10px;
+
+            @include xxs {
+                font-size: 50px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &__txt {
+        .rv-5-section__heading {
+            width: 100%;
+            text-align: left;
+        }
+
+        .rv-5-section__title {
+            margin-bottom: 22px;
+
+            @include lg {
+                margin-bottom: 17px;
+            }
+        }
+    }
+
+    &__descr {
+        color: rgb(4, 14, 31, 0.7);
+        font-family: var(--mulish);
+        margin-bottom: 32px;
+
+        @include lg {
+            margin-bottom: 22px;
+        }
+    }
+
+    &__features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        row-gap: 12px;
+        margin-bottom: 54px;
+
+        @include xl {
+            gap: 12px 20px;
+        }
+
+        @include lg {
+            margin-bottom: 34px;
+        }
+
+        @include sm {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__feature {
+        position: relative;
+        padding-left: 30px;
+
+        &::before {
+            content: "\f058";
+            position: absolute;
+            left: 0;
+            font-family: "Font Awesome 6 Pro";
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 1.3;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .rv-3-def-btn {
+            background-color: #8E5B63;
+            border-color: #8E5B63;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__call {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    &__call-icon {
+        width: 54px;
+        height: 54px;
+        line-height: 54px;
+        text-align: center;
+        border: 1px solid rgba(2, 2, 8, 0.14);
+        border-radius: 50%;
+        color: #8E5B63;
+        font-size: 22px;
+
+        @include lg {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 20px;
+        }
+    }
+
+    &__call-txt {
+        h6 {
+            color: #020208;
+            font-family: var(--mulish);
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        a {
+            color: rgb(2, 2, 8, 0.6);
+            font-family: var(--mulish);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 142.857%;
+        }
+    }
+
+    &__vector {
+        position: absolute;
+        z-index: -1;
+
+        &--1 {
+            left: 0;
+            top: 263px;
+
+            @include xs {
+                top: 133px;
+            }
+        }
+
+        &--2 {
+            right: 0;
+            bottom: 188px;
+
+            @include xxl {
+                right: -180px;
+            }
+
+            @include sm {
+                display: none;
+            }
+        }
+    }
+}
+
+// INDEX-6 ABOUT
+.rv-6-about {
+    padding-bottom: 160px;
+
+    @include xl {
+        padding: 40px 0 120px;
+    }
+
+    @include lg {
+        padding: 40px 0 100px;
+    }
+
+    @include md {
+        padding: 30px 0 100px;
+    }
+
+    .rv-6-section__heading {
+        margin-bottom: 18px;
+
+        @include md {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__descr {
+        color: rgb(5 5 5 / 70%);
+        font-family: var(--mulish);
+        margin-bottom: 30px;
+
+        @include sm {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__features {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 60px;
+        row-gap: 10px;
+
+        @include lg {
+            column-gap: 30px;
+        }
+
+        @include xxs {
+            grid-template-columns: repeat(1, max-content);
+        }
+
+        .rv-5-about__feature {
+            color: #050505;
+            font-family: var(--mulish);
+            font-weight: 700;
+            padding-left: 22px;
+
+            &::before {
+                content: "\f00c";
+                font-weight: 700;
+                top: 50%;
+                translate: 0 -50%;
+                font-size: 15px;
+            }
+        }
+    }
+
+    &__btns {
+        @include xxs {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__call {
+        gap: 12px;
+
+        .rv-5-about__call-icon {
+            width: 52px;
+            height: 52px;
+            line-height: 52px;
+            text-align: center;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 18px;
+            background-color: #f2584c;
+
+            @include md {
+                width: 46px;
+                height: 46px;
+                line-height: 46px;
+                font-size: 16px;
+            }
+        }
+
+        .rv-5-about__call-txt a {
+            color: #050505;
+            font-family: var(--mulish);
+            font-weight: 700;
+            font-size: 16px;
+
+            &:hover {
+                color: #f2584c;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+
+        img {
+            border-radius: 20px;
+
+            @include lg {
+                width: 70%;
+            }
+
+            &:last-child {
+                position: absolute;
+                bottom: -100px;
+                right: 0;
+                border: 5px solid var(--white-f);
+                box-shadow: 0px 10px 40px 0px rgba(2, 2, 8, 0.14);
+
+                @include lg {
+                    bottom: -80px;
+                }
+            }
+        }
+    }
+}
+
+// INDEX-8 ABOUT
+.rv-8-about {
+    @include xl {
+        padding: 40px 0;
+    }
+
+    @include md {
+        padding: 30px 0;
+    }
+
+    &__video.rv-5-video {
+        position: relative;
+        padding: 355px 0;
+        background-image: url(../img/rv-8-about-img.jpg);
+
+        @include xl {
+            padding: 300px 0;
+        }
+
+        @include lg {
+            padding: 280px 0;
+        }
+
+        @include md {
+            padding: 250px 0;
+        }
+
+        @include sm {
+            padding: 200px 0;
+        }
+
+        @include xs {
+            padding: 170px 0;
+        }
+
+        @include xxs {
+            padding: 150px 0;
+        }
+
+        span {
+            width: 140px;
+            height: 140px;
+        }
+
+        a {
+            background: #1C74E9;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            font-size: 20px;
+
+            &::before {
+                content: none;
+            }
+        }
+
+        .vector {
+            position: absolute;
+            bottom: 176px;
+            left: -97px;
+        }
+    }
+
+    &__txt {
+        padding-left: 80px;
+        position: relative;
+
+        @include xl {
+            padding-left: 30px;
+        }
+
+        @include lg {
+            padding-left: 20px;
+        }
+
+        @include md {
+            padding-left: 0;
+        }
+
+        .vector {
+            position: absolute;
+            z-index: -1;
+
+            &--1 {
+                bottom: -80px;
+                left: 160px;
+
+                @include md {
+                    bottom: 0;
+                    left: auto;
+                    right: 0;
+                }
+
+                @include xs {
+                    right: -80px;
+                }
+
+                @include xxs {
+                    right: -190px;
+                }
+            }
+
+            &--3 {
+                right: 0;
+                top: -135px;
+            }
+
+            &--2 {
+                right: -100px;
+                top: 130px;
+            }
+        }
+    }
+
+    .rv-8-section__title {
+        margin-bottom: 21px;
+
+        @include xxs {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__descr {
+        color: var(--black);
+        font-family: var(--mulish);
+        margin-bottom: 28px;
+
+        @include sm {
+            margin-bottom: 18px;
+        }
+    }
+
+    &__stats {
+        column-gap: 65px;
+        margin-bottom: 46px;
+        flex-wrap: wrap;
+
+        @include xl {
+            column-gap: 45px;
+        }
+
+        @include lg {
+            column-gap: 25px;
+        }
+
+        @include sm {
+            margin-bottom: 30px;
+        }
+    }
+
+    &-stat {
+        font-family: var(--mulish);
+        color: #050505;
+
+        &__number {
+            font-size: 40px;
+            font-weight: 800;
+
+            @include lg {
+                font-size: 35px;
+            }
+
+            @include xxs {
+                font-size: 30px;
+                margin-bottom: 2px;
+            }
+        }
+
+        &__name {
+            font-size: 15px;
+            font-weight: 600;
+            opacity: 0.7;
+
+        }
+    }
+
+    .rv-3-def-btn {
+        background-color: #1c74e9;
+        border-color: #1c74e9;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+// INDEX-10 ABOUT
+.rv-10-about {
+    .rv-10-section__heading {
+        width: 100%;
+        text-align: left;
+    }
+
+    &__img {
+        img {
+            border-radius: 14px;
+        }
+    }
+
+    &__txt {
+        padding-left: 79px;
+    }
+
+    .rv-10-section__title {
+        margin-bottom: 20px;
+    }
+
+    &__descr {
+        color: rgb(5 5 5/ 60%);
+        font-family: var(--mulish);
+        margin-bottom: 58px;
+    }
+
+    .rv-10-def-btn {
+        background-color: var(--black);
+        border-color: var(--black);
+        color: var(--white-f);
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__video-btn {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: var(--black);
+        color: #050505;
+        font-family: var(--mulish);
+        font-weight: 700;
+
+        .icon {
+            width: 54px;
+            height: 54px;
+            line-height: 54px;
+            text-align: center;
+            background-color: gold;
+            border-radius: 50%;
+            color: var(--black);
+        }
+
+        i {
+            filter: drop-shadow(0 1px 2px rgb(5 5 5 / 20%));
+        }
+    }
+}
+
+// INDEX-11 ABOUT
+.rv-11-about {
+    position: relative;
+
+    &__img {
+        img {
+            border-radius: 0 40px;
+
+            &:last-child {
+                border-radius: 40px 0;
+                border-width: 10px;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &__txt {
+        padding-left: 84px;
+        position: relative;
+
+        .rv-11-section__sub-title {
+            margin-left: 0;
+        }
+
+        .rv-6-about__descr {
+            font-weight: 500;
+            margin-top: 17px;
+        }
+
+        .rv-8-about-stat__number {
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 4px;
+
+            sup {
+                color: #A98153;
+                font-size: 40px;
+                font-weight: 800;
+            }
+        }
+
+        .rv-8-about-stat__name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        img.vector {
+            position: absolute;
+            top: -70px;
+            right: 75px;
+        }
+    }
+
+    >img.vector {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+// INDEX-14 ABOUT
+.rv-14-about {
+    &__img {
+        img {
+            // clip-path: url(../img/rv-14-about-mask.svg#rv-14-about-mask);
+            clip-path: url(#mask);
+            width: 100%;
+            height: 630px;
+        }
+
+        svg path {
+            animation: rotate-center 2s ease-in-out infinite alternate both;
+            transform-origin: center;
+        }
+
+    }
+
+    &__txt {
+        padding-left: 80px;
+
+        .rv-6-about__descr {
+            margin-top: 16px;
+            margin-bottom: 37px;
+        }
+    }
+
+    &__features {
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 25px;
+        row-gap: 7px;
+        border: none;
+        padding-top: 0;
+        margin-bottom: 53px;
+    }
+
+    &__btn {
+        border-radius: 30px;
+        height: 54px;
+        line-height: 54px;
+
+        i {
+            color: var(--black);
+        }
+    }
+
+    &__call {
+        .rv-5-about__call-icon {
+            border-radius: 50%;
+            height: 54px;
+            width: 54px;
+            line-height: 54px;
+        }
+    }
+}
+
+@keyframes rotate-center {
+    0% {
+        d: path("M0.0379601 317.48H0V0C156.158 0 285.984 112.742 312.52 261.27V0H630C630 156.158 517.258 285.984 368.73 312.52L630 312.52V630C473.842 630 344.016 517.258 317.48 368.73L317.48 630C143.797 630 2.68874 490.532 0.0379601 317.48Z");
+    }
+
+    100% {
+        d: path("M 0.0379601 317.48 H 0 V 0 C 446.158 0 565.984 -37.258 312.52 261.27 V 0 H 631 C 623 486.158 667.258 355.984 478.73 312.52 L 630 312.52 V 630 C 473.842 840 70.016 517.258 317.48 368.73 L 317.48 630 C 143.797 930 -297.31126 490.532 0.0379601 317.48 Z");
+    }
+}

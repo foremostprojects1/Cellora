@@ -1,0 +1,96 @@
+/* ----- 26. Features ----- */
+.rv-7-features {
+    background-color: #1A1C19;
+    padding: 36px 50px;
+    position: relative;
+    margin-top: -50px;
+    color: var(--white-f);
+    display: flex;
+    gap: 50px;
+    z-index: 1;
+
+    @include xl {
+        padding: 36px 35px;
+        gap: 35px;
+    }
+
+    @include lg {
+        padding: 26px 35px;
+    }
+
+    @include md {
+        flex-wrap: wrap;
+    }
+
+    @include sm {
+        gap: 25px;
+    }
+}
+
+.rv-7-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    font-family: var(--mulish);
+    flex: auto;
+
+    @include lg {
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    @include md {
+        flex: 45%;
+        flex-direction: row;
+    }
+
+    @include sm {
+        flex-direction: column;
+    }
+
+    &:not(:last-child) {
+        border-right: 1px solid rgb(255 255 255 / 10%);
+        padding-right: 50px;
+
+        @include xl {
+            padding-right: 35px;
+        }
+
+        @include md {
+            border: none;
+            padding-right: 0;
+        }
+    }
+
+    img {
+        width: 35px;
+        height: 35px;
+        object-fit: none;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 3px;
+    }
+
+    &__sub-title {
+        font-size: 15px;
+        margin-bottom: 0;
+        opacity: 60%;
+    }
+}
+
+// INDEX-12 FEATURES
+.rv-12-features {
+    background-color: #EEF6E7;
+
+}
+
+.rv-12-feature {
+    color: var(--black);
+
+    .rv-7-feature__sub-title {
+        font-weight: 500;
+    }
+}

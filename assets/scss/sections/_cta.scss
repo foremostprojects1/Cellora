@@ -1,0 +1,76 @@
+/* ----- 35. CTA ----- */
+.rv-14-nwsltr__form {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+
+    @include lg {
+        gap: 35px;
+    }
+
+    @include xxs {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .nwsltr-left {
+        width: 100%;
+    }
+
+    input {
+        border-bottom: 1px solid rgba(2, 2, 8, 0.10);
+        padding-bottom: 18px;
+
+        @include sm {
+            padding-bottom: 10px;
+        }
+
+        &::placeholder {
+            color: rgb(2, 2, 8, 0.7);
+            font-family: var(--mulish);
+            font-size: 15px;
+            line-height: 66.667%;
+        }
+    }
+
+    .nwsltr-checkbox {
+        color: rgb(2, 2, 8, 0.5);
+        font-family: var(--mulish);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 71.429%;
+    }
+
+    button {
+        font-weight: 700;
+        font-family: var(--mulish);
+
+        &:hover {
+            color: #794aff;
+        }
+
+        i {
+            font-size: 22px;
+            opacity: 1;
+        }
+    }
+}
+
+.rv-14-nwsltr__checkbox {
+    @include sm {
+        padding-top: 12px;
+    }
+
+    label,
+    a {
+        color: rgb(2, 2, 8, 0.5);
+        font-family: var(--mulish);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 71.429%;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}

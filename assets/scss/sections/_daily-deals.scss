@@ -1,0 +1,115 @@
+/* ----- 27. Daliy Deals ----- */
+.rv-7-daily-deals {
+    border: 1px solid rgb(5 5 5 / 10%);
+    padding: 30px;
+    padding-top: 50px;
+    position: relative;
+
+    @include md {
+        padding-top: 0;
+    }
+
+    @include sm {
+        padding: 0;
+        border: none;
+    }
+
+    &__heading {
+        position: absolute;
+        bottom: calc(100% - 20px);
+        border: 1px solid rgb(5 5 5/ 10%);
+        left: 80px;
+        padding: 10px 30px;
+        background-color: var(--white-f);
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        @include xl {
+            bottom: calc(100% - 25px);
+        }
+
+        @include lg {
+            bottom: calc(100% - 30px);
+        }
+
+        @include md {
+            margin-bottom: 20px;
+            flex-direction: column;
+            position: static;
+            row-gap: 10px;
+            margin-top: -20px;
+            text-align: center;
+        }
+
+        &_right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            @include xxs {
+                flex-direction: column;
+                row-gap: 10px;
+            }
+
+            h6 {
+                margin-bottom: 0;
+                color: #050505;
+                font-family: var(--mulish);
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+
+
+    .rv-7-section__title {
+        font-size: 34px;
+
+        @include md {
+            font-size: 30px;
+        }
+
+        @include sm {
+            font-size: 27px;
+        }
+
+        @include xxs {
+            font-size: 25px;
+        }
+    }
+
+    &__countdown {
+        .syotimer {
+            &__body {
+                display: flex;
+                gap: 6px;
+            }
+
+            &-cell {
+                display: flex;
+                background-color: #D21028;
+                border-radius: 30px;
+                color: var(--white-f);
+                padding: 0 8px;
+                height: 34px;
+                line-height: 34px;
+                min-width: 48px;
+                text-align: center;
+            }
+        }
+    }
+
+    .rv-7-slider-nav--small {
+        padding: 0 30px;
+
+        @include sm {
+            padding: 0;
+        }
+
+        @include xs {
+            margin-top: 15px;
+            gap: 10px;
+        }
+    }
+}
